@@ -9,7 +9,7 @@ This is a minimal, fast-to-start 'create notes' that includes:
 Frontend will be available at http://localhost:5173
 Backend (Laravel) will be available at http://localhost:8000
 
-To run use docker:
+To run:
 
 docker-compose build --no-cache
 docker-compose up -d
@@ -36,13 +36,13 @@ DB_DATABASE=app
 DB_USERNAME=app
 DB_PASSWORD=secret
 
-then go to docker:
+then run docker:
 docker-compose build --no-cache
 docker-compose up -d
 
 following:
 
-docker exec -it notes-backend-1 bash
+docker exec -it (name of the project)notes-main-backend-1 bash
 composer install
 php artisan key:generate
 php artisan migrate 
