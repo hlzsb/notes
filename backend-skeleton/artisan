@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+echo "Artisan placeholder. Install real Laravel (composer install) to use artisan.
+";
