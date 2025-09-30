@@ -21,3 +21,33 @@ docker-compose down
 To check if the components are running:
 
 docker ps
+
+------
+steps to make the application work:
+
+first go to backend then from command line run:
+cp .env.example .env
+
+following copy the text below to you new .env file:
+DB_CONNECTION=pgsql
+DB_HOST=db
+DB_PORT=5432
+DB_DATABASE=app
+DB_USERNAME=app
+DB_PASSWORD=secret
+
+then go to docker:
+docker-compose build --no-cache
+docker-compose up -d
+
+following:
+
+docker exec -it notes-backend-1 bash
+composer install
+php artisan key:generate
+php artisan migrate 
+
+----
+important information:
+currently the fetching of information from db is slow 
+I have to work on that 
